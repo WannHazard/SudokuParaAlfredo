@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Diario - 5 Sudokus Nuevos Cada Día</title>
+    <meta name="description" content="Juega 5 nuevos sudokus cada día con diferentes niveles de dificultad">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sudoku Diario</h1>
+            <p class="tagline">5 nuevos sudokus cada día</p>
+            <div class="welcome-message">
+                <p>¡Bienvenido Alfredo! Disfruta de tus sudokus diarios.</p>
+            </div>
+        </header>
+
+        <div class="controls">
+            <div class="difficulty-selector">
+                <button class="difficulty-btn active" data-difficulty="easy">Fácil</button>
+                <button class="difficulty-btn" data-difficulty="medium">Medio</button>
+                <button class="difficulty-btn" data-difficulty="hard">Difícil</button>
+            </div>
+            <div class="game-controls">
+                <button id="new-game" class="control-btn"><i class="fas fa-sync-alt"></i> Nuevo</button>
+                <button id="check-game" class="control-btn"><i class="fas fa-check"></i> Verificar</button>
+                <button id="solve-game" class="control-btn"><i class="fas fa-magic"></i> Resolver</button>
+            </div>
+        </div>
+
+        <div class="sudoku-container">
+            <div class="sudoku-navigation">
+                <button id="prev-sudoku" class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+                <span id="sudoku-counter">Sudoku 1 de 5</span>
+                <button id="next-sudoku" class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            
+            <div class="timer">Tiempo: <span id="timer">00:00</span></div>
+            
+            <div id="sudoku-board" class="sudoku-board">
+                <!-- El tablero de sudoku se generará dinámicamente con JavaScript -->
+            </div>
+            
+            <div class="number-pad">
+                <button class="num-btn" data-num="1" aria-label="Número 1">1</button>
+                <button class="num-btn" data-num="2" aria-label="Número 2">2</button>
+                <button class="num-btn" data-num="3">3</button>
+                <button class="num-btn" data-num="4">4</button>
+                <button class="num-btn" data-num="5">5</button>
+                <button class="num-btn" data-num="6">6</button>
+                <button class="num-btn" data-num="7">7</button>
+                <button class="num-btn" data-num="8">8</button>
+                <button class="num-btn" data-num="9">9</button>
+                <button class="num-btn erase" data-num="0" aria-label="Borrar número"><i class="fas fa-eraser"></i></button>
+            </div>
+        </div>
+
+        <div class="status-message" id="status-message"></div>
+
+        <footer>
+            <p>© 2023 Sudoku Diario - Nuevos sudokus todos los días</p>
+            <p>Creado por WannHazard</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
